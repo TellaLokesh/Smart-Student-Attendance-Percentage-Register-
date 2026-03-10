@@ -1,0 +1,300 @@
+:root{
+
+--primary:#6a11cb;
+--secondary:#2575fc;
+
+--success:#00c853;
+--danger:#ff1744;
+
+--light-bg:#f4f6fb;
+--dark-bg:#121212;
+
+--light-card:#ffffff;
+--dark-card:#1e1e1e;
+
+--light-text:#222;
+--dark-text:#f5f5f5;
+
+}
+
+/* Animated Gradient Background */
+
+body{
+
+margin:0;
+font-family:Arial, sans-serif;
+
+background:linear-gradient(
+270deg,
+#6a11cb,
+#2575fc,
+#00c6ff,
+#0072ff
+);
+
+background-size:600% 600%;
+
+animation:gradientMove 12s ease infinite;
+
+color:var(--light-text);
+
+}
+
+@keyframes gradientMove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+
+/* Header */
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px;
+
+color:white;
+
+}
+
+/* Layout */
+
+main{
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+gap:30px;
+
+padding:20px;
+
+}
+
+/* Form Card */
+
+.form-section{
+
+background:rgba(255,255,255,0.9);
+
+padding:25px;
+
+border-radius:12px;
+
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+
+animation:fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* Form */
+
+form{
+
+display:flex;
+flex-direction:column;
+
+gap:12px;
+
+width:260px;
+
+}
+
+input,select{
+
+padding:10px;
+
+border-radius:6px;
+
+border:1px solid #ccc;
+
+font-size:14px;
+
+}
+
+/* Button */
+
+button{
+
+padding:10px;
+
+border:none;
+
+border-radius:6px;
+
+background:linear-gradient(
+45deg,
+#6a11cb,
+#2575fc
+);
+
+color:white;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+
+}
+
+/* Table */
+
+table{
+
+border-collapse:collapse;
+
+width:85%;
+
+background:white;
+
+border-radius:12px;
+
+overflow:hidden;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+animation:fadeIn 1.5s ease;
+
+}
+
+th{
+
+background:linear-gradient(
+45deg,
+#6a11cb,
+#2575fc
+);
+
+color:white;
+
+padding:14px;
+
+}
+
+td{
+
+padding:12px;
+
+text-align:center;
+
+color:#333;
+
+}
+
+tr{
+
+border-bottom:1px solid #eee;
+
+transition:0.3s;
+
+}
+
+tr:hover{
+
+background:#f4f4f4;
+
+}
+
+/* Status */
+
+.good{
+
+color:var(--success);
+
+font-weight:bold;
+
+}
+
+.low{
+
+color:var(--danger);
+
+font-weight:bold;
+
+}
+
+
+/* Dark Mode */
+
+body.dark{
+
+background:var(--dark-bg);
+
+color:var(--dark-text);
+
+}
+
+body.dark .form-section{
+
+background:var(--dark-card);
+
+}
+
+body.dark table{
+
+background:#1e1e1e;
+
+}
+
+body.dark td{
+
+color:#f5f5f5;
+
+}
+
+body.dark th{
+
+background:#333;
+
+}
+
+body.dark tr:hover{
+
+background:#2a2a2a;
+
+}
+
+/* Responsive */
+
+@media(max-width:700px){
+
+table{
+width:100%;
+}
+
+form{
+width:100%;
+}
+
+}
